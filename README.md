@@ -114,10 +114,10 @@ now that we are specifying additional options.
 
 Reloading the `/posts/id/post_data` page now gives us something more like this:
 
-```javascript
+```javascript 
 {
   id: 1,
-  title: "A Blog Post By Stephen King",
+  title: "A Blog Post By Stephen King", 
   description: "This is a blog post by Stephen King. It will probably be a movie soon.",
   author: {
     name: "Stephen King"
@@ -129,7 +129,7 @@ Which is exactly the data we need to get the job done.
 
 ### Responding To Requests With Different Formats
 
-If we think about what we've been doing when we load `/posts/id/post_data`,
+If we think about what we've been doing when we load `/posts/id/post_data`, 
 we're really just requesting a `Post` resource, same as if we were on the Post
 `show` page. In fact, that's exactly what we're doing in AJAX on the Post `show`
 page, requesting the data for that page and replacing the values.
@@ -169,7 +169,7 @@ get the same thing.
 But if we browse to `/posts/id.json`, we now get our serialized post in JSON
 form!
 
-Now let's update the code in our `show.html.erb` to use the `show` route.
+Now let's update the code in our `show.html.erb` to use the `show` route. 
 
 ```erb
 # posts/show.html.erb
@@ -192,7 +192,7 @@ $(function () {
 Instead of doing a `$.get()` to `/posts/id/post_data`, we are now getting
 `/posts/id.json`. If we reload the page and click the `Next` button, everything
 still works and we don't have to change any of the code to extract the JSON
-values!
+values! 
 
 ## Summary
 
